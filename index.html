@@ -11,5 +11,11 @@
   <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
   <script src="app.js"></script>
+  <script>
+    window.addEventListener('error', (event) => {
+      console.error('Error:', event.error);
+      document.getElementById('root').innerHTML = '<div class="p-4 text-red-600">Error loading application. Check console for details.</div>';
+    });
+  </script>
 </body>
 </html>
